@@ -5,10 +5,49 @@
     
   <body>
 
-    <!-- {{}} is variables -->
-<!-- {% %} if or for loops maybe while-->
-
+    <!-- double curly brace is variables -->
+    <!-- curly brace with double percent signs if or for loops maybe while-->
+  {% if name %}
     <p>Hello {{name}}</p>
+  {% else %}
+    <p>Hello</p>
 
+  {% endif %}
+
+
+  {% if age %}
+    {% if age<16 %}
+      <p> {{name}} you are too young</p>
+    {% else %}
+      <p> {{name}} is old enough to drive</p>
+  
+    {% endif %}
+  {% endif %} 
+    
+
+
+    
+<!-- 
+ CONCEPTS to know
+
+Create
+Read
+Update
+Delete
+
+main 4 http requests
+Post
+Get
+Patch
+Delete
+    
+-->
+
+    
+    <form method="POST">
+      <input name="name" placeholder="Enter name"> 
+      <input name="age" placeholder="Enter Age">
+      <input type="submit">
+    </form>
   </body>
 </html>
